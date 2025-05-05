@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 function Home() {
   // Updated with verified working images of children in therapy settings
   const images = {
-    heroBg: "https://images.pexels.com/photos/939331/pexels-photo-939331.jpeg", // Happy children playing
-    playTherapy: "https://images.pexels.com/photos/1263348/pexels-photo-1263348.jpeg", // Child with toys
+    heroBg: "https://images.pexels.com/photos/789786/pexels-photo-789786.jpeg", 
+    playTherapy: "https://images.pexels.com/photos/1263348/pexels-photo-1263348.jpeg", 
     mindfulness: "https://images.pexels.com/photos/1483768/pexels-photo-1483768.jpeg", // Child doing yoga
     familyTherapy: "https://images.pexels.com/photos/35537/child-children-girl-happy.jpg", // Happy family
     artTherapy: "https://images.pexels.com/photos/159823/kids-girl-pencil-drawing-159823.jpeg" // Child drawing
@@ -33,47 +33,46 @@ function Home() {
 
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white">
-      {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center bg-indigo-600 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <img
-          src={images.heroBg}
-          alt="Happy children playing in therapy center"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="container mx-auto px-6 z-10 text-center">
-          <h1
-            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
-            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+    {/* Hero Section with new banner image */}
+    <section className="relative h-[80vh] flex items-center justify-center bg-indigo-600 text-white overflow-hidden">
+      <div className="absolute inset-0 bg-black opacity-30"></div>
+      <img
+        src={images.heroBg}
+        alt="Happy diverse children playing together"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div className="container mx-auto px-6 z-10 text-center">
+        <h1
+          className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+        >
+          Helping Kids Shine <span className="text-yellow-300">Brighter</span>
+        </h1>
+        <p
+          className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto"
+          style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}
+        >
+          A playful approach to emotional wellness for children and families
+        </p>
+        
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="https://wa.me/918770953003?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20for%20my%20child."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-400 hover:bg-yellow-300 text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 inline-block shadow-lg"
           >
-            Helping Kids Shine <span className="text-yellow-300">Brighter</span>
-          </h1>
-          <p
-            className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto"
-            style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}
+            Schedule a Consultation
+          </a>
+          <Link
+            to="/about"
+            className="border-2 border-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 inline-block"
           >
-            A playful approach to emotional wellness for children and families
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://wa.me/918770953003?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20for%20my%20child."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-yellow-400 hover:bg-yellow-300 text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 inline-block shadow-lg"
-            >
-              Schedule a Consultation
-            </a>
-            <Link
-              to="/about"
-              className="border-2 border-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 inline-block"
-            >
-              Meet Our Team
-            </Link>
-          </div>
+            Meet Our Team
+          </Link>
         </div>
-      </section>
-
+      </div>
+    </section>
       {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
